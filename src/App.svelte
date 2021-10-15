@@ -9,7 +9,8 @@
     fullVersionLink,
     interests,
     introData,
-    projects,
+    termProjects,
+    sideProjects,
     sourceLink,
     technologies,
     workExperiences,
@@ -104,11 +105,30 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-2xl print:text-4xl uppercase text-left">Projects</h2>
+    <h2 class="text-2xl print:text-4xl uppercase text-left">Term Projects</h2>
     <hr />
 
     <ul class="text-left list-disc pl-8">
-      {#each projects as project}
+      {#each termProjects as project}
+        <li>
+          <HideToggle />
+          <strong>{project.name}</strong>
+          - {project.details}
+          <a href="https://{project.url}" target="_blank" rel="noreferrer"
+            ><strong>{project.url}</strong></a
+          >
+        </li>
+      {/each}
+    </ul>
+  </section>
+
+  <section>
+    <HideToggle />
+    <h2 class="text-2xl print:text-4xl uppercase text-left">Side Projects</h2>
+    <hr />
+
+    <ul class="text-left list-disc pl-8">
+      {#each sideProjects as project}
         <li>
           <HideToggle />
           <strong>{project.name}</strong>
