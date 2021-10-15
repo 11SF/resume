@@ -1,7 +1,7 @@
 <script lang="ts">
   import Tailwind from "./Tailwind.svelte"
   import Intro from "./Intro.svelte"
-  import Work from "./Work.svelte"
+  // import Work from "./Work.svelte"
   import Kofi from "./Kofi.svelte"
   import HideToggle from "./HideToggle.svelte"
   import {
@@ -12,8 +12,7 @@
     termProjects,
     sideProjects,
     sourceLink,
-    technologies,
-    workExperiences,
+    technologies
   } from "./data"
 
   let editMode = false
@@ -93,7 +92,7 @@
     </ul>
   </section>
 
-  <section>
+  <!-- <section>
     <HideToggle />
     <h2 class="text-2xl print:text-4xl uppercase text-left">Work Experience</h2>
     <hr />
@@ -101,7 +100,7 @@
     {#each workExperiences as exp}
       <Work {...exp} />
     {/each}
-  </section>
+  </section> -->
 
   <section>
     <HideToggle />
